@@ -1,0 +1,68 @@
+.homeImg{
+    width:50%;
+    border-radius: 6px;
+    height: 400px;
+}
+.homeImg:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.1);
+    margin-top: 10px;
+  }
+#divImg{
+    margin-bottom:128px;
+}
+#divCon{
+    max-width:1400px
+}
+#headerHome{
+    padding:10px 6px;
+}
+.inputSignUp {
+    margin-top: 1px;
+      border: rgb(114, 114, 114) 2px solid;
+      border-radius: 4px;
+      width: 15%;
+      padding: 5px;
+      font-size: 16px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+     
+    }
+    .btnLogIn{
+        margin:10px;
+        padding: 5px;
+    }
+    .newCustomer{
+        font-size: 25px;
+    
+    }
+    .signUp{
+        text-align: center;
+        margin-top: 50px;
+    }
+     
+    .PagenotFound{
+        text-align: center;
+        font-family: cursive;
+font-size: 90px;
+margin: 100px;
+    }
+    .notFoundTitle{
+        color: rgba(255, 0, 0, 0.767);
+        font-size: 100px;
+    }
+    .mnueBox{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    .imgsMenue{
+        width: 30%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    .menuDes{
+        font-size: 14px;
+    }

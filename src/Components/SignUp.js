@@ -31,6 +31,12 @@ export default function SignUp() {
       }
     };
     return (
+    //   <div >
+    //   <div className="w3-padding-32 ">
+    //  <Link className="w3-opacity w3-bar-item w3-button w3-blue" to="/">Home page</Link>
+    
+    //         </div>
+
         <div className="signUp">
         <h1 className="signUpTitle">Join Us:</h1>
         <input className="inputSignUp"
@@ -59,13 +65,14 @@ export default function SignUp() {
                   <br/>
   
   
-        <button className="btnSignUp"
+        <button className="btnSignUp" className="w3-opacity w3-bar-item w3-button w3-yellow"
           onClick={() => {
             addUser();
           }}
         >
           sign up
         </button>
-      </div>
+        </div>
+    
     );
   }
