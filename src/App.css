@@ -53,16 +53,132 @@ margin: 100px;
         color: rgba(255, 0, 0, 0.767);
         font-size: 100px;
     }
-    .mnueBox{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
-    }
-    .imgsMenue{
-        width: 30%;
-        height: 50%;
-        border-radius: 20px;
-    }
+  
     .menuDes{
         font-size: 14px;
     }
+   .smallimg{
+       height: 100px;
+       width:80px;
+       margin-top: 10px;
+
+   } */
+   .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+.menu{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.menu-group-heading {
+    margin: 0;
+    padding-bottom: 0.1em;
+    border-bottom: 3px solid rgb(53, 49, 49);
+
+    ;
+}
+.menu-group{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+}
+.menu-item{
+    display: flex;
+}
+.menu-item-image{
+    width: 125px;
+    height: 90px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 0.5em;
+}
+.menu-item-text{
+    flex-grow: 1;
+}
+.menu-item-heading{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.menu-item-name {
+    margin-right: 1.5em;
+}
+.menu-item-description{
+    line-height: 1.6em;
+}
+.menu-item-price {
+    
+    margin-left: auto;
+
+
+}
+.menu-item-button{
+    border:none;
+    background-color: white;
+}
+.menu-item-button:hover{
+    background-color: rgb(253, 253, 139);
+    
+
+}
+
+@media screen and (min-width: 992px) {
+    .menu{
+        font-size: 16px;
+    }
+    .menu-group {
+        grid-template-columns: repeat(2 , 1fr);
+
+    }
+    
+}
+#menu{
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: 40px;
+}
+
+.imgss1{
+    height: 200px;
+    width: 50%;
+    border-radius: 5px;
+    display: center;
+  width: 30%;
+  
+}
+
+.cookPage{
+    text-align: center;
+}
+.FoodName{
+    /* font-family:Trattatello, fantasy; */
+    font-size: 20px;
+    /* font-family: Luminari, fantasy; */
+    font-family: Serif;
+}
+/* .FoodDes{
+
+} */
+
+.onePage-item-button{
+    border:none;
+    background-color: white;
+    font-size: 30px;
+}
+.admin{
+    text-align: center;
+    font-family: Marker Felt, fantasy;
+}
+.adminP{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+}
+.qtyBtn{
+    border-style: hidden;
+    background-color: white;
+}

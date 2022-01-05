@@ -5,7 +5,7 @@ import {BsCart4 } from "react-icons/bs"
 import "../App.css"
 
 
-export default function NavBar({token , setToken}) {
+export default function NavBar({token , setToken,isAdmin}) {
 // const logedOut =()=>{
 //     localStorage.removeItem("token");
 //         localStorage.removeItem("admin");
@@ -16,9 +16,10 @@ export default function NavBar({token , setToken}) {
 {(token)?(
             <div className="w3-panel w3-center w3-opacity w3-bar w3-border">
                 <Link className="w3-bar-item w3-button w3-yellow" to="/">Home </Link>
-                <Link  className="w3-bar-item w3-button " to="/MenueList">ϻenu <BiFoodMenu/></Link>
-                <Link  className="w3-bar-item w3-button " to="/Cart">Cart <BsCart4/> </Link>
-
+                <Link  className="w3-bar-item w3-button " to="/MenueList">Ḿenu <BiFoodMenu/></Link>
+             
+          {isAdmin==false?     <Link  className="w3-bar-item w3-button " to="/Cart">Cart <BsCart4/> </Link>
+:""}
                 <Link   className="w3-bar-item w3-button " to="/" 
                 onClick={() => {setToken("");
                     localStorage.clear();

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export default function Login({setToken ,setIsAdmin}) {
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [isAdmin ,setIsAdmin]= useState()
   const Navigate = useNavigate();
   const changeEmail = (e) => {
     setEmail(e.target.value);
@@ -21,7 +20,6 @@ export default function Login({setToken ,setIsAdmin}) {
       const response = await axios.post("http://localhost:5000/login", {
         email: email,
         password: password,
-        // isAdmin:isAdmin
       });
       if(response.data.isAdmin == true){
         setToken(response.data.token)
@@ -40,19 +38,7 @@ Navigate("/admin")
       console.log(error);
     }
 
-    // const CheckAdminLogin = async ()=>{
-    //   try{
-    //     const response = await axios.post("http://localhost:5000/login", {
-    //       email: email,
-    //       password: password,
-    //       isAdmin
-    //     });
-    //     setAdmin(response.data.token)
-
-    //   }catch{
-
-    //   }
-    // }
+ 
   };
     return (
         <div className="signUp" >

@@ -8,6 +8,8 @@ import SignUp from './Components/SignUp';
 import MenueList from './Components/MenueList';
 import Cart from './Components/Cart';
 import AdminPage from './Components/AdminPage';
+import CookPage from './Components/CookPage';
+// import updatePage from './Components/updatePage';
 function App() {
   const [token, setToken] = useState("");
   const [isAdmin ,setIsAdmin]= useState(false)
@@ -31,16 +33,17 @@ function App() {
   return <>
   <div>
 
-      <Navbar token={token}  setToken={setToken} setIsAdmin={setIsAdmin}/> 
-      {/* token={token} setToken={setToken */}
+      <Navbar token={token}  setToken={setToken} setIsAdmin={setIsAdmin} isAdmin={isAdmin}/> 
       <Routes>
         <Route exact path="/Login" element={ <LogIn  setToken={setToken} setIsAdmin={setIsAdmin} />}/>
         <Route  exact path="/Signup" element={<SignUp />} />
         <Route exact path="/MenueList" element={<MenueList token={token}/>}/>
-  <Route exact path="/Cart" element={<Cart/>}/>
+  <Route exact path="/Cart" element={<Cart token={token} isAdmin={isAdmin}/>}/>
 {isAdmin == true?   <Route exact path="/admin" element={<AdminPage token={token} setToken={setToken} setIsAdmin={setIsAdmin}/>}/>
 :""}  
+<Route exact path="menu/:id" element={<CookPage   token={token} />}/>
         <Route  exact path="/" element={<Home />} />
+        {/* <Route exact path="/update" element={<updatePage/>} /> */}
         <Route exact path="*" element={<NotFound />} />
 
         </Routes>
