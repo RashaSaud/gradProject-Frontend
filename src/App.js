@@ -12,7 +12,7 @@ import CookPage from './Components/CookPage';
 import Successful from './Components/Successful';
 require("dotenv").config();
 
-function App() {
+function App() { 
   console.log(process.env.REACT_APP_BACKEND_URL,"backend url");
   
   const [token, setToken] = useState("");
