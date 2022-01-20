@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {BiFoodMenu} from 'react-icons/bi'
-import {BsCart4 } from "react-icons/bs"
+import {MdOutlineAddShoppingCart } from "react-icons/md"
 import "../App.css"
 
-
 export default function NavBar({token , setToken,isAdmin}) {
-// const logedOut =()=>{
-//     localStorage.removeItem("token");
-//         localStorage.removeItem("admin");
-// }
+
+
+
+
+   
     return (
         <div className="w3-panel w3-center  ">
 
@@ -18,8 +18,14 @@ export default function NavBar({token , setToken,isAdmin}) {
                 <Link className="w3-bar-item w3-button w3-yellow" to="/">Home </Link>
                 <Link  className="w3-bar-item w3-button " to="/MenueList">Ḿenu <BiFoodMenu/></Link>
              
-          {isAdmin==false?     <Link  className="w3-bar-item w3-button " to="/Cart">Cart <BsCart4/> </Link>
+          {isAdmin===false?   
+            <Link  className="w3-bar-item w3-button " to="/Cart">Cart
+        
+          
+          <MdOutlineAddShoppingCart/> </Link>
 :""}
+               {isAdmin===true? <Link to="/admin" className="w3-bar-item w3-button ">admin panel</Link>:""}
+
                 <Link   className="w3-bar-item w3-button " to="/" 
                 onClick={() => {setToken("");
                     localStorage.clear();
@@ -27,6 +33,8 @@ export default function NavBar({token , setToken,isAdmin}) {
                   }} 
                 
                 >Log out</Link>
+
+
 </div>
            
 

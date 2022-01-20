@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 export default function Login({setToken ,setIsAdmin}) {
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [chickLogIn, setchickLogIn] = useState("");
+
   const Navigate = useNavigate();
   const changeEmail = (e) => {
     setEmail(e.target.value);
@@ -17,7 +19,7 @@ export default function Login({setToken ,setIsAdmin}) {
 
   const checkLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
         email: email,
         password: password,
       });
@@ -34,8 +36,19 @@ Navigate("/admin")
         localStorage.setItem("admin",JSON.stringify(response.data.isAdmin))
 
       Navigate("/MenueList");
-    }} catch (error) {
-      console.log(error);
+    }
+  }
+
+    
+    
+    
+    catch (error) {
+     if(error.response.status === 403){
+       setchickLogIn("the password isn't correct")
+
+     }else if(error.response.status === 404){
+      setchickLogIn("the email isn't correct")
+     }
     }
 
  
@@ -59,10 +72,13 @@ Navigate("/admin")
         }}      className="w3-opacity w3-bar-item w3-button w3-yellow " to="/login"
         >Log in</button>
         <br/>
+        <h3 className="wrongPass"> {chickLogIn} </h3>
+
             <label className="newCustomer">You dont have an account?  </label>
             <Link  to={`/signup`} >
             <a   className="w3-bar-item w3-text "  >Join Us</a>
             </Link>
     </div>
+ 
     )
 }

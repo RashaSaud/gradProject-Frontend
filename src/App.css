@@ -35,7 +35,7 @@
         padding: 5px;
     }
     .newCustomer{
-        font-size: 25px;
+        font-size: 15px;
     
     }
     .signUp{
@@ -62,7 +62,7 @@ margin: 100px;
        width:80px;
        margin-top: 10px;
 
-   } */
+   } 
    .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -74,8 +74,8 @@ margin: 100px;
 }
 .menu-group-heading {
     margin: 0;
-    padding-bottom: 0.1em;
-    border-bottom: 3px solid rgb(53, 49, 49);
+    padding-bottom: 1em;
+    border-bottom: 2px solid rgb(53, 49, 49);
 
     ;
 }
@@ -93,7 +93,8 @@ margin: 100px;
     height: 90px;
     flex-shrink: 0;
     object-fit: cover;
-    margin-right: 0.5em;
+    margin-right: 1.5em;
+    cursor:pointer;
 }
 .menu-item-text{
     flex-grow: 1;
@@ -112,19 +113,15 @@ margin: 100px;
 .menu-item-price {
     
     margin-left: auto;
+    font-size: 15px;
 
 
 }
-.menu-item-button{
-    border:none;
+.menu-item-cart button{
+    border-style: hidden;
     background-color: white;
-}
-.menu-item-button:hover{
-    background-color: rgb(253, 253, 139);
-    
 
 }
-
 @media screen and (min-width: 992px) {
     .menu{
         font-size: 16px;
@@ -135,33 +132,24 @@ margin: 100px;
     }
     
 }
-#menu{
-    font-family: 'Times New Roman', Times, serif;
-    color: gray;
-    font-size: 40px;
-}
 
 .imgss1{
     height: 200px;
-    width: 50%;
+    width: 20%;
     border-radius: 5px;
-    display: center;
-  width: 30%;
-  
+    display: center;  
 }
+  
 
 .cookPage{
     text-align: center;
 }
 .FoodName{
-    /* font-family:Trattatello, fantasy; */
     font-size: 20px;
-    /* font-family: Luminari, fantasy; */
     font-family: Serif;
 }
-/* .FoodDes{
 
-} */
+
 
 .onePage-item-button{
     border:none;
@@ -182,3 +170,79 @@ margin: 100px;
     border-style: hidden;
     background-color: white;
 }
+.orderBtn{
+    width: 210px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.Cart-Container{
+    width: 70%;
+    height: 85%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+   }
+  
+  
+   /* cart css */
+
+ 
+
+   .wrongPass{
+       color: rgb(170, 85, 85);
+       margin-top: 5px;
+       font-size: 15px;
+   }
+   .orderSuccessful{
+       text-align: center;
+       margin-top: 90px;
+   }
+
+   .orderText{
+       color: green;
+       font: bold;
+       font-family:initial
+   }
+   .upload{
+
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+    
+   }
+      .upload:hover {background-color: #e7e7e7;}
+
+   .x{
+       color: red;
+       border: hidden;
+background-color: white;
+font-size: 20px;
+   }
+   .x:hover{
+    background-color: #e7e7e7;
+   }
+
+   /*Home css */
+
+ 
+  .w4-xlarge{
+
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: 20;
+}
+  @keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    100% {left:0px; top:0px;}
+  } 
+
+  
+
+  
+
+
+
+
+  

@@ -21,7 +21,8 @@ export default function SignUp() {
           email: email,
           password: password,
         });
-      const response = await axios.post("http://localhost:5000/signUp", {
+        
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/signUp`, {
         name: name,
         email: email,
         password: password,
@@ -29,13 +30,9 @@ export default function SignUp() {
       if (response.status === 201){
           Navigate("/Login")
       }
-    };
+      };
     return (
-    //   <div >
-    //   <div className="w3-padding-32 ">
-    //  <Link className="w3-opacity w3-bar-item w3-button w3-blue" to="/">Home page</Link>
-    
-    //         </div>
+  
 
         <div className="signUp">
         <h1 className="signUpTitle">Join Us:</h1>
@@ -73,6 +70,10 @@ export default function SignUp() {
           sign up
         </button>
         </div>
+
     
+   
+  
+  
     );
   }
