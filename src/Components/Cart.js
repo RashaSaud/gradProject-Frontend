@@ -29,7 +29,7 @@ const navigate = useNavigate();
 
     useEffect(async() => {
         console.log("hhhiii from UseEffect")
-          const result = await axios.get("http://localhost:5000/cart",
+          const result = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/cart`,
             {
               headers:{authorization: "Bearer " + token},
           });
@@ -42,7 +42,7 @@ const navigate = useNavigate();
           
             console.log(token ,"tt")
                console.log("hii1")
-               const del = await axios.delete(`http://localhost:5000/delete/${id}`,{
+               const del = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/delete/${id}`,{
                    headers:{authorization: "Bearer "+ token}
                });
 
@@ -53,7 +53,7 @@ const navigate = useNavigate();
           
         console.log(token ,"tt")
            console.log("hii1")
-           const delAll = await axios.delete(`http://localhost:5000/deleteAllItem/${id}`,{
+           const delAll = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteAllItem/${id}`,{
             headers:{authorization: "Bearer "+ token}
 
            });
@@ -64,7 +64,7 @@ const navigate = useNavigate();
        const Test = async (id)=>{
         try{
             console.log("Hiii ");
-       const result = await axios.post(`http://localhost:5000/addTocart/${id}`,{},
+       const result = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/addTocart/${id}`,{},
        {
            headers:{authorization: "Bearer " + token}
     })
@@ -100,12 +100,12 @@ const navigate = useNavigate();
 const sendEmail = async(index) =>{
     console.log("hiii1")
        try{
-        const sendMail = await axios.post("http://localhost:5000/send-email",{
+        const sendMail = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/send-email`,{
         email:email
          })
          navigate("/orderSuccessful")
          
-      const clearCart = await axios.delete("http://localhost:5000/clearCart",{
+      const clearCart = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/clearCart`,{
         headers:{authorization: "Bearer " + token}
 
       })
