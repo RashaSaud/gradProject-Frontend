@@ -382,3 +382,20 @@ width: 400px;
     color:rgb(231, 16, 8);
     text-align: right;
    }
+
+
+@media (min-width: 360px) {
+  * {
+    font-size: 1.0em;
+  }
+}
+
+@media (min-width: 500px) {
+  .carttt .product,
+  .remove .content {
+    display: inline-block;
+    width: 100%;
+  }
+
+ 
+}
