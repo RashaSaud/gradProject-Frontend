@@ -126,12 +126,13 @@ margin: 100px;
     .menu{
         font-size: 16px;
     }
-    .menu-group {
+    .menu-group ,.menu-item-cart{
         grid-template-columns: repeat(2 , 1fr);
 
     }
     
 }
+
 
 .imgss1{
     height: 200px;
@@ -241,7 +242,13 @@ font-size: 20px;
   
 
   
-
+  
+  @media screen and (max-width: 600px) {
+    .inputSignUp, input[type=submit] {
+      width: 50%;
+      margin-top: 0;
+    }
+  }
 
 
 
