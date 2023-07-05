@@ -15,7 +15,7 @@ export default function AdminPage({token }) {
     const [postImg1, setPostImg1] = useState([])
     const [postImg2, setPostImg2] = useState([])
     const [progress, setProgress] = useState(0);
-
+//testttttt12  jiasjaisjaiji 
 
     useEffect(async() => {
       console.log("hhhiii from UseEffect")
